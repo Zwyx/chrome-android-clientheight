@@ -26,3 +26,13 @@ If, in your case, the red button isn't clicked (it might depend on the height of
 This has been observed by others: [_Viewport height changes upon clicking the page_ in vercel/next.js](https://github.com/vercel/next.js/issues/47839)
 
 Here is another, simpler, reproduction: https://zwyx.github.io/chrome-android-clientheight/simple
+
+## GOOD NEWS: potential/partial fix found!
+
+Adding `interactive-widget=resizes-content` to the `viewport` meta tag fixes the issue, as demonstrated at https://zwyx.github.io/chrome-android-clientheight/fixed
+
+`clientHeight` is still wrong after 10ms and 100ms, but it becomes correct at 1s, and the buttons are positioned correctly:
+
+![Screenshot from 2024-03-26 22-24-14](https://github.com/Zwyx/chrome-android-clientheight/assets/29386932/82459ab4-e4b8-4874-acf7-1c9af1064649)
+
+Read about the `interactive-widget` option to consider if it is acceptable for your use-case: https://developer.chrome.com/blog/viewport-resize-behavior
