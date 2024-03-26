@@ -27,7 +27,7 @@ This has been observed by others: [_Viewport height changes upon clicking the pa
 
 Here is another, simpler, reproduction: https://zwyx.github.io/chrome-android-clientheight/simple
 
-## GOOD NEWS: potential/partial fix found!
+## GOOD NEWS: fix found!
 
 Adding `interactive-widget=resizes-content` to the `viewport` meta tag fixes the issue, as demonstrated at https://zwyx.github.io/chrome-android-clientheight/fixed
 
