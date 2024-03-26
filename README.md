@@ -23,7 +23,7 @@ If, in your case, the red button isn't clicked (it might depend on the height of
 - When the page is refreshed, the bug doesn't happen.
 - If your keyboard is not visible when navigating to the page (hide your keyboard, and tap the entry in Chrome dropdown menu just below the address bar), then the bug doesn't happen either.
 
-This has been observed by others: [_Viewport height changes upon clicking the page_ in vercel/next.js](https://github.com/vercel/next.js/issues/47839)
+This has been observed by others: [_Viewport height changes upon clicking the page_ in vercel/next.js](https://github.com/vercel/next.js/issues/47839) (+ [discussion following fix](https://github.com/vercel/next.js/discussions/63724))
 
 Here is another, simpler, reproduction: https://zwyx.github.io/chrome-android-clientheight/simple
 
