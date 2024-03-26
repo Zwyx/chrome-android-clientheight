@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0" />
+		<style>
+			.dialog {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				padding: 8px;
+				border: 1px solid blue;
+			}
+		</style>
+		<script>
+			setTimeout(() => {
+				document.getElementById("clientHeight10").innerHTML =
+					document.documentElement.clientHeight;
+			}, 10);
+			setTimeout(() => {
+				document.getElementById("clientHeight100").innerHTML =
+					document.documentElement.clientHeight;
+			}, 100);
+			setTimeout(() => {
+				document.getElementById("clientHeight1000").innerHTML =
+					document.documentElement.clientHeight;
+			}, 1000);
+			setTimeout(() => {
+				document.getElementById("clientHeight3000").innerHTML =
+					document.documentElement.clientHeight;
+			}, 3000);
+		</script>
+	</head>
+	<body>
+		<div>clientHeigh at 10ms: <span id="clientHeight10" /></div>
+		<div>clientHeigh at 100ms: <span id="clientHeight100" /></div>
+		<div>clientHeigh at 1s: <span id="clientHeight1000" /></div>
+		<div>clientHeigh at 3s: <span id="clientHeight3000" /></div>
+		<div>
+			clientHeigh after click: <span id="clientHeightAfterClick"></span>
+		</div>
+
+		<div style="margin-top: 16px">
+			Click the green button (or somewhere around it, depending on your device).
+		</div>
+
+		<div style="margin-top: 16px">
+			Please see
+			<a
+				href="https://github.com/zwyx/chrome-android-clientheight"
+				target="_blank"
+				><code>github.com/zwyx/chrome-android-clientheight</code></a
+			>
+			for complete instructions.
+		</div>
+
+		<div class="dialog">
+			<div style="margin-bottom: 100px">
+				<button onclick="alert('Nice, you clicked the green button')">
+					Green button, you can click it
+				</button>
+			</div>
+
+			<button
+				onclick="
+					alert(`Oh no, you clicked the RED BUTTON!\nAnd documentElement.clientHeight is now: ${document.documentElement.clientHeight}`);
+					document.getElementById('clientHeightAfterClick').innerHTML = document.documentElement.clientHeight;
+				"
+			>
+				RED BUTTON, DO NOT CLICK IT
+			</button>
+		</div>
+	</body>
+</html>
