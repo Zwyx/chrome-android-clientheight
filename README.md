@@ -1,3 +1,5 @@
+See **https://issues.chromium.org/issues/331326389** (discussion ongoing as of March 2025).
+
 ## The bug
 
 The `clientHeight` property has a wrong value when a page is loaded for the first time and the user's keyboard was visible when triggering the navigation. Then, on the first interaction with the page, a shift happens, which can lead the user to perform an unwanted action.
@@ -27,7 +29,7 @@ This has been observed by others: [_Viewport height changes upon clicking the pa
 
 Here is another, simpler, reproduction: https://zwyx.github.io/chrome-android-clientheight/simple
 
-## GOOD NEWS: fix found!
+## Possible workaround
 
 Adding `interactive-widget=resizes-content` to the `viewport` meta tag fixes the issue, as demonstrated at https://zwyx.github.io/chrome-android-clientheight/fixed
 
