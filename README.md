@@ -1,4 +1,16 @@
-See **https://issues.chromium.org/issues/331326389** (discussion ongoing as of March 2025).
+<!-- One empty line required for the `---` to work correctly -->
+
+---
+
+<div align="center">
+
+**Update: this is now fixed in Chrome 139** 🎉
+
+</div>
+
+---
+
+See **https://issues.chromium.org/issues/331326389**.
 
 ## The bug
 
